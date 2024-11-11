@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;      
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    align-items: center;
+}
+.myproject{
+    font-size: 3.5rem;
+    color: whitesmoke;
+    margin-left: 50px;
+}
+.nav-link {
+    flex: 1;
+    text-align: right;
+}
+.nav-link ul li {
+    padding: 8px 12px;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link ul li a {
+    text-decoration: none;
+    color: rgb(251, 247, 231);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.nav-link ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #EE4266;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-link ul li a:hover::after {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgba(31, 6, 0, 0.7),rgba(4,9,30,0.7)), url('Images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.contact{
+    background-image: linear-gradient(linear-gradient(rgba(31, 6, 0, 0.7),rgba(4,9,30,0.7)));
+    height: 100vh;
+
+}
+.section-container{
+    background: #0C0C0C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.messageInfo{
+    background-image: linear-gradient(135deg,rgba(182, 121, 248, 0.774),rgba(101, 0, 254, 0.7));
+    padding: 2%;
+    border-radius: 10px;
+    flex: 1.5;
+    margin:3% ;
+    animation: slideInFromLeft ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+}
+
+.messageInfo h2{
+    color: #d2abff;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-size: 5em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 2vw;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contactInfo{
+    background-image: linear-gradient(rgba(31, 6, 0, 0.7),rgba(4,9,30,0.7)), url('Images/Prayon1.jpg');
+    width: 50%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    flex: 3;
+    flex-wrap: wrap;
+}
+
+.contactInfo .box{
+    margin: 10px 80px;
+    margin-left: 2%;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.contactInfo .box .icon{
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    color: #757575;
+}
+.contactInfo .box .text{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.contactInfo .box:hover .text {
+    display: block;
+}
+.box .icon {
+    padding: 10px;
+    margin-right: 10px; 
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+  
+.box:hover .icon {
+    background-color: transparent; 
+}
+  
+
+.icon.twitter:hover {
+    color: #E1E8ED;
+    background-color: #14171A; 
+}
+  
+.icon.facebook:hover {
+    color: #E1E8ED;
+    background-color: #4267B2; 
+}
+  
+.icon.whatsapp:hover {
+    color: #E1E8ED;
+    background-color: #25D366; 
+}
+  
+.icon.instagram:hover {
+    color: #E1E8ED;
+    background-color: #E4405F; 
+}
+
+.icon.email:hover {
+    background-color: #e1ea35; 
+    color: #000000;
+}
+
+.icon.phone:hover {
+    color: #E1E8ED;
+    background-color: #34B7F1; 
+}
+form input, textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 15px;
+    outline: none;
+    background: #b7b3ffe9;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* form button{
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    margin: 20px 0;
+} */
+
+form button {
+    font-size: 18px;
+    width: 200px;
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: none;
+    outline: none;
+    margin: 20px auto 0;
+    background-color: #4CAF50; 
+    color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+form button:active {
+    background-color: #398d3e;
+    transform: scale(0.98);
+}
+
+.box i{
+    font-size: 30px;
+}
+
+.container4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .container4 {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 1023px) {
+    .container4 {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .container4 {
+        grid-template-columns: 1fr; 
+    }
+}
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    perspective: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.card {
+    position: relative;
+    height: 400px;
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+}
+
+.card-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.card-front h3 {
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85); 
+    color: white;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+.card-back h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.card-back p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ddd;
+}
+
+.card-back a {
+    color: #ee4266;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #ee4266;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-back a:hover {
+    background-color: #ee4266;
+    color: white;
+}
+
+
+.project-card:hover .card-front {
+    opacity: 0; 
+}
+
+.project-card:hover .card-back {
+    opacity: 1; 
+}
+
+.project-card:nth-child(1) .card-front {
+    background-image: url('Images/PrayonExp.jpg'); 
+}
+
+.project-card:nth-child(2) .card-front {
+    background-image: url('Images/Prayon1.jpg'); 
+}
+
+.project-card:nth-child(3) .card-front {
+    background-image: url('Images/PrayonExp3.jpg'); 
+}
+
+.project-card:nth-child(4) .card-front {
+    background-image: url('Images/PrayonWork.jpg'); 
+}
+
+.project-card:nth-child(5) .card-front {
+    background-image: url('Images/PrayonExp2.jpg'); 
+}
+
+.project-card:nth-child(6) .card-front {
+    background-image: url('Images/Prayon2.jpg'); 
+}
+
